@@ -1,0 +1,104 @@
+/*전체 적용*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+    
+/*레이아웃*/
+nav{
+    background-color: #B1B2FF;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /*좌 중 우 배치*/
+    color:white;
+    height: 40px;
+    top: 0;
+    position: sticky;
+}
+nav > ul{
+    display: flex;
+    list-style: none;    
+}
+/* nav > ul > li{
+    margin: 3px;
+} */
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+nav a:hover{
+    background-color:#D2DAFF;
+    color:#B1B2FF;
+}
+nav i{
+    padding: 5px;
+}
+header{
+    background-color: #AAC4FF;
+}
+.header_left, .header_right{
+    margin: 20px;
+}
+.header_left{
+    width: 30%;
+    text-align: center;
+}
+.header_right{
+    width: 70%;
+}
+header > section{
+    display: flex;
+}
+main{
+    background-color: #D2DAFF;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+main > section{
+    width: 25%;
+    margin: 20px;
+    text-align: center;
+}
+img{
+    border-radius: 30%;
+}
+footer{
+    background-color: #EEF1FF;
+    display: flex;
+    /* justify-content: space-between; */
+    bottom: 0;
+    position: sticky;
+}
+footer > h2, footer > ul{
+    margin: 10px;
+}
+footer > h2{
+    /* width: 25%; */
+    font-size: 20px;
+}
+footer > ul{
+    list-style: none;
+}
+
+@media only screen and (max-width:600px) {
+    header > section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header_left, .header_right {
+        width: 80%;        
+    }
+    main {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        align-items: center;
+    }
+    main > section{
+        width: 80%;        
+        text-align: center;
+    }
+    footer > ul {
+        display: none;
+    }
+}
